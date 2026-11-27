@@ -4,10 +4,22 @@
 sentence = input()
 keyword = input()
 # TODO: 단어 수와 낱말의 위치, 포함 여부를 구해 보세요.
-sen_word = count(sentence)
-f_word = keyword.find(sentence)
-print(sen_word)
-print(f_word)
-result = ""
+# sen_word = sentence.count(keyword)
+# last_word = len(sentence) -1
+word = sentence.split()
+first_word = sentence.find(keyword)
+last_word = sentence.rfind(keyword)
+check = "예" if keyword in sentence else "아니오"
+
+# print(sen_word)
+# print(last_word)
+# print(len(word))
+# print(first_word)
+# print(last_word)
+# print(check)
+# result = "단어 수: " + str(len(word)) + "\n첫 위치" + str(first_word) + "\n마지막 위치: " + str(last_word) + "\n포함 여부: " + check
+result = f"단어 수: {len(word)}\n첫 위치: {first_word}\n마지막 위치: {last_word}\n포함 여부: {check}"
+
 # 2) 완성한 결과를 출력해요.
 print(result)
+# print(result2)
